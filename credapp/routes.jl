@@ -14,4 +14,4 @@ route("/") do
   serve_static_file("welcome.html")
 end
 
-route("/apply", ApplicationsController.apply)
+route("/applications", ApplicationsController.applications)

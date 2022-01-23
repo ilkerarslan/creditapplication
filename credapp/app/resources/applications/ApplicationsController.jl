@@ -3,8 +3,8 @@ module ApplicationsController
   using Genie.Renderers.Html
   using Applications
 
-  function apply()
-    html(:applications, "apply.jl", model=Applications.factory(), context=@__MODULE__)
+  function applications()
+    html(:applications, "applications.jl", model=Applications.factory(), context=@__MODULE__)
   end
 
 end

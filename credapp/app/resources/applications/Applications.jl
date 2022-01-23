@@ -7,7 +7,6 @@ using SearchLight, SearchLightSQLite
 using OrderedCollections
 using DataFrames, GLM
 
-
 import SearchLight: AbstractModel, DbId
 
 export Application
@@ -24,12 +23,9 @@ export Application
 end
 
 function factory()
-  model = Application |> init
-  isempty(getpayload()) ||  (request_params[getchannel(model)] = getpayload())
-  
+  model = Application |> init  
   model
 end
-
 
 
 end
