@@ -4,7 +4,7 @@ module ApplicationsController
   using Applications
 
   function apply()
-    html(:applications, "apply.jl", context=@__MODULE__)
+    html(:applications, "apply.jl", model=Applications.factory(), context=@__MODULE__)
   end
 
 end

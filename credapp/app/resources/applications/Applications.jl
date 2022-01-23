@@ -1,11 +1,18 @@
 module Applications
 
+using Stipple
+using Genie.Requests
+using Dates 
+using SearchLight, SearchLightSQLite
+using OrderedCollections
+using DataFrames, GLM
+
+
 import SearchLight: AbstractModel, DbId
-import Base: @kwdef
 
 export Application
 
-@kwdef mutable struct Application <: AbstractModel
+@reactive mutable struct Application <: AbstractModel
   id::DbId = DbId()
   refno::String = ""
   musno::Int = 0
@@ -15,5 +22,14 @@ export Application
   cekno::Int = 0 
   cektutar::Int = 0 
 end
+
+function factory()
+  model = Application |> init
+  isempty(getpayload()) ||  (request_params[getchannel(model)] = getpayload())
+  
+  model
+end
+
+
 
 end
