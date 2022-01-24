@@ -11,7 +11,7 @@ import SearchLight: AbstractModel, DbId
 
 export Application
 
-@reactive mutable struct Application <: AbstractModel
+@reactive mutable struct Application <: ReactiveModel
   id::DbId = DbId()
   refno::String = ""
   musno::Int = 0
