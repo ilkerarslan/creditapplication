@@ -10,8 +10,9 @@ if Genie.Configuration.isprod()
 end
 
 #=== server ===#
-# route("/") do
-#   serve_static_file("welcome.html")
-# end
+route("/") do
+  serve_static_file("welcome.html")
+end
 
 route("/applications", ApplicationsController.applications)
+route("/basvuru", ApplicationsController.basvuru)

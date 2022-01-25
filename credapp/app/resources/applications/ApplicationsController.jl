@@ -7,4 +7,9 @@ module ApplicationsController
     html(:applications, "applications.jl", model=Applications.factory(), context=@__MODULE__)
   end
 
+  function basvuru()
+    html(:applications, "basvuru.jl", model=Applications.factory(), context=@__MODULE__)
+  end
+
+
 end

@@ -19,7 +19,7 @@ export Application
   borcluno::Int = 0 
   borcluunvan::String = "" 
   cekno::Int = 0 
-  cektutar::Int = 0 
+  cektutar::Int = 0   
 end
 
 function factory()
